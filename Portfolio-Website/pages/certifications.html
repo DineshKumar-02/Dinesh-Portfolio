@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,24 +8,40 @@
   <link rel="stylesheet" href="../style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    section { padding-top: 6rem; }
-    .back-btn { margin-bottom: 2rem; display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; color: var(--accent); font-weight: 600; font-family: var(--font-display); }
-    .back-btn:hover { text-decoration: underline; }
+    section {
+      padding-top: 6rem;
+    }
+
+    .back-btn {
+      margin-bottom: 2rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-decoration: none;
+      color: var(--accent);
+      font-weight: 600;
+      font-family: var(--font-display);
+    }
+
+    .back-btn:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
+
 <body>
-    
+
   <!-- Sticky Header Navigation -->
   <header>
     <div class="container nav-container">
       <a href="../index.html" class="logo">DineshKumar<span>.</span></a>
       <nav class="nav-links">
-        <a href="../index.html#home" class="nav-link">Home</a>
-        <a href="../index.html#about" class="nav-link">About</a>
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
         <a href="../index.html#skills" class="nav-link">Skills</a>
-        <a href="../index.html#projects" class="nav-link">Projects</a>
-        <a href="../index.html#certifications" class="nav-link active">Certifications</a>
-        <a href="../index.html#contact" class="nav-link">Contact</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="certifications.html" class="nav-link active">Certifications</a>
+        <a href="contact.html" class="nav-link">Contact</a>
       </nav>
     </div>
   </header>
@@ -33,11 +50,11 @@
   <section style="border: none;">
     <div class="container">
       <a href="../index.html#certifications" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
-      
+
       <h1 class="section-title">Credentials Gallery</h1>
 
       <div class="cert-grid">
-        
+
         <div class="cert-item" data-cert="../assets/certificates/Web-Developement(parakh).pdf">
           <div class="cert-top">
             <h3>Web Developer Internship</h3>
@@ -104,7 +121,8 @@
           </div>
         </div>
 
-        <div class="cert-item" data-cert="../assets/certificates/SkyScanner - Front-emnd _completion_certificate (1).pdf">
+        <div class="cert-item"
+          data-cert="../assets/certificates/SkyScanner - Front-emnd _completion_certificate (1).pdf">
           <div class="cert-top">
             <h3>Front-End Engineering Experience</h3>
             <p>SkyScanner / Forage</p>
@@ -117,7 +135,7 @@
 
         <div class="cert-item" data-cert="../assets/certificates/Introduction to CryptoCurrency.pdf">
           <div class="cert-top">
-            <h3>Introduction to Cryptocurrency</h3> 
+            <h3>Introduction to Cryptocurrency</h3>
             <p>Infosys Springboard</p>
           </div>
           <div class="cert-bottom">
@@ -158,4 +176,5 @@
 
   <script src="../script.js"></script>
 </body>
+
 </html>
