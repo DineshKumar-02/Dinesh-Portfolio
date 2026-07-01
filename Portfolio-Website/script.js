@@ -76,4 +76,66 @@ document.addEventListener('DOMContentLoaded', () => {
       if (e.target === modal) closeModal();
     });
   }
+
+  // Asynchronous AJAX Contact Form Submission
+  const contactForm = document.getElementById('contact-form');
+  if (contactForm) {
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      const submitBtn = contactForm.querySelector('button[type="submit"]');
+      const originalBtnText = submitBtn.textContent;
+      submitBtn.textContent = 'Sending...';
+      submitBtn.disabled = true;
+      
+      const formData = new FormData(contactForm);
+      const action = contactForm.getAttribute('action');
+      
+      let statusDiv = document.getElementById('form-status');
+      if (!statusDiv) {
+        statusDiv = document.createElement('div');
+        statusDiv.id = 'form-status';
+        contactForm.appendChild(statusDiv);
+      }
+      
+      if (action.includes('placeholder')) {
+        statusDiv.className = 'form-status error active';
+        statusDiv.textContent = 'Contact form is in demo mode. Please replace "placeholder" in the form action with your Formspree Endpoint ID!';
+        submitBtn.textContent = originalBtnText;
+        submitBtn.disabled = false;
+        return;
+      }
+      
+      try {
+        const response = await fetch(action, {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+        
+        if (response.ok) {
+          statusDiv.className = 'form-status success active';
+          statusDiv.textContent = 'Thank you! Your message was sent successfully.';
+          contactForm.reset();
+        } else {
+          const data = await response.json();
+          statusDiv.className = 'form-status error active';
+          statusDiv.textContent = data.errors ? data.errors.map(err => err.message).join(', ') : 'Oops! There was a problem submitting your message.';
+        }
+      } catch (error) {
+        statusDiv.className = 'form-status error active';
+        statusDiv.textContent = 'Oops! There was a problem connecting to the server.';
+      } finally {
+        submitBtn.textContent = originalBtnText;
+        submitBtn.disabled = false;
+        
+        // Hide message after 8 seconds
+        setTimeout(() => {
+          statusDiv.classList.remove('active');
+        }, 8000);
+      }
+    });
+  }
 });
