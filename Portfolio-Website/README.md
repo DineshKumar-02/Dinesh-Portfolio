@@ -47,26 +47,3 @@ Portfolio-Website/
     ├── contact.html         # Communications center
     └── about.html           # Professional timeline
 ```
-
----
-
-## 🚀 How to Run Locally
-
-Since this website uses vanilla web assets, there are **no compile steps** or npm configurations required.
-
-### Option A: Static Load
-Double click `index.html` to execute the webpage directly inside default web browsers.
-
-### Option B: Local HTTP Server (Recommended)
-Running a local web server allows PDFs inside frames to load correctly due to cross-origin policies.
-
-Using Node.js (`http-server`):
-```bash
-npx http-server ./
-```
-
-Using Python:
-```bash
-python -m http.server 8000
-```
-Then open `http://localhost:8000` inside your browser.
