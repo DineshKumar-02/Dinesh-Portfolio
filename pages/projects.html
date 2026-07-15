@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | DineshKumar S</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    section {
+      padding-top: 6rem;
+    }
+
+    .back-btn {
+      margin-bottom: 2rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-decoration: none;
+      color: var(--accent);
+      font-weight: 600;
+      font-family: var(--font-display);
+    }
+
+    .back-btn:hover {
+      text-decoration: underline;
+    }
+
+    .detailed-project-list {
+      display: flex;
+      flex-direction: column;
+      gap: 5rem;
+    }
+
+    .detail-card {
+      padding: 2.5rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+    }
+
+    .detail-block {
+      margin-top: 1.75rem;
+    }
+
+    .detail-block h4 {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      color: var(--text);
+      margin-bottom: 0.75rem;
+      padding-bottom: 0.3rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .detail-block ul {
+      padding-left: 1.25rem;
+      color: var(--text-muted);
+    }
+
+    .detail-block ul li {
+      margin-bottom: 0.4rem;
+      font-size: 0.9rem;
+    }
+
+    .diagram-code {
+      background: #000;
+      padding: 1rem;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+      font-family: monospace;
+      font-size: 0.85rem;
+      color: var(--accent);
+      white-space: pre-wrap;
+      margin: 1rem 0;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Sticky Header Navigation -->
+  <header>
+    <div class="container nav-container">
+      <a href="../index.html" class="logo">DineshKumar<span>.</span></a>
+      <nav class="nav-links">
+        <a href="../index.html#home" class="nav-link">Home</a>
+        <a href="../index.html#about" class="nav-link">About</a>
+        <a href="../index.html#skills" class="nav-link">Skills</a>
+        <a href="../index.html#projects" class="nav-link active">Projects</a>
+        <a href="../index.html#certifications" class="nav-link">Certifications</a>
+        <a href="../index.html#contact" class="nav-link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Projects Section -->
+  <section style="border: none;">
+    <div class="container">
+      <a href="../index.html#projects" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
+
+      <h1 class="section-title">Case Studies</h1>
+
+      <div class="detailed-project-list">
+
+        <!-- ThinkHub Detailed Case Study -->
+        <div class="detail-card">
+          <div class="project-meta">Full Stack MERN Stack</div>
+          <h2 style="font-family: var(--font-display); font-size: 2rem; margin-top: 0.25rem;">ThinkHub Community Blog
+          </h2>
+
+          <div class="detail-block">
+            <h4>Application Architecture</h4>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">
+              ThinkHub follows a MERN Stack architecture structure. A client application designed in React communicates
+              with an Express and Node server which tracks collection indices in a MongoDB Atlas database using Mongoose
+              models.
+            </p>
+            <div class="diagram-code">
+              [React.js Frontend] ──(REST API Calls)──> [Node/Express Server]
+              │
+              [Mongoose ODM]
+              │
+              [React.js Frontend] <──(JSON Responses)─── [MongoDB Atlas Database] </div>
+            </div>
+
+            <div class="detail-block">
+              <h4>Key Features</h4>
+              <ul>
+                <li><strong>User Signup:</strong> Verification logic ensuring fields (Name, Email, Age >= 13) match
+                  rules before database commits.</li>
+                <li><strong>Category Filtering:</strong> Dashboard structured into 14 distinct channels to ensure
+                  straightforward post searches.</li>
+                <li><strong>CRUD Router:</strong> Backend routes supporting safe document insertions, collection
+                  queries, and document removals.</li>
+                <li><strong>Cloud Deployment:</strong> Deployed static React files to Netlify and configured Render
+                  scripts for API server endpoints.</li>
+              </ul>
+            </div>
+
+            <div class="detail-block">
+              <h4>Challenges and Resolutions</h4>
+              <ul>
+                <li><strong>Database CORS alerts:</strong> Handled cross-domain security bans by configuring appropriate
+                  middleware filters inside express setups.</li>
+                <li><strong>Reload routing drops:</strong> Avoided 404 navigation drops on Netlify manual page reloads
+                  by establishing correct rewrite mappings in local <code>_redirects</code> configs.</li>
+                <li><strong>API URL Consistency:</strong> Used environment configurations to switch clean endpoint
+                  endpoints during development and deployment transitions.</li>
+              </ul>
+            </div>
+
+            <div class="project-links" style="margin-top: 2rem;">
+              <a href="https://github.com/DineshKumar-02/ThinkHub-Blog-App" class="btn-sm-primary" target="_blank"><i
+                  class="fa-brands fa-github"></i> Repository</a>
+              <a href="https://thinkhub-a-community-blog-web.onrender.com/" class="btn-sm-secondary" target="_blank"><i
+                  class="fa-solid fa-arrow-up-right-from-square"></i> Live App</a>
+            </div>
+          </div>
+
+          <!-- MetaQR Detailed Case Study -->
+          <div class="detail-card">
+            <div class="project-meta">Frontend DOM Engine</div>
+            <h2 style="font-family: var(--font-display); font-size: 2rem; margin-top: 0.25rem;">MetaQR Generator Tool
+            </h2>
+
+            <div class="detail-block">
+              <h4>Design Language</h4>
+              <p style="color: var(--text-muted); font-size: 0.95rem;">
+                Built with a sleek dark aesthetic inspired by Solana and MetaMask dashboard layouts, utilizing simple
+                grey panels and soft purple highlights.
+              </p>
+            </div>
+
+            <div class="detail-block">
+              <h4>Functional Highlights</h4>
+              <ul>
+                <li><strong>No Bloat:</strong> Implemented purely with raw DOM selectors, avoiding bulky NPM scripts.
+                </li>
+                <li><strong>Multiple Exports:</strong> Canvas pixel capture exports instantly to client-side PNG formats
+                  or as clean vector PDF templates.</li>
+                <li><strong>History log checking:</strong> Stores historical code generation logs inside browser
+                  localStorage arrays without databases.</li>
+              </ul>
+            </div>
+
+            <div class="project-links" style="margin-top: 2rem;">
+              <a href="https://github.com/DineshKumar-02/MetaQR" class="btn-sm-primary" target="_blank"><i
+                  class="fa-brands fa-github"></i> Repository</a>
+              <a href="https://qrcode-gen-bydk.netlify.app/" class="btn-sm-secondary" target="_blank"><i
+                  class="fa-solid fa-arrow-up-right-from-square"></i> Live App</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="margin-top: 5rem;">
+    <div class="container footer-wrap">
+      <div class="footer-copy">&copy; 2026 DineshKumar S. All rights reserved.</div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

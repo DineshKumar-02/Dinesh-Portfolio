@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | DineshKumar S</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    section {
+      padding-top: 6rem;
+    }
+
+    .back-btn {
+      margin-bottom: 2rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-decoration: none;
+      color: var(--accent);
+      font-weight: 600;
+      font-family: var(--font-display);
+    }
+
+    .back-btn:hover {
+      text-decoration: underline;
+    }
+
+    /* Layout & Section Styling */
+    .about-section {
+      margin-bottom: 4rem;
+    }
+
+    /* Grid for side-by-side layout */
+    .sections-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    /* Education Cards */
+    .about-section-title {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      margin: 0 0 1.5rem 0;
+      color: var(--text);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.5rem;
+    }
+
+    .education-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .education-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 1.25rem;
+      transition: border-color 0.2s ease;
+    }
+
+    .education-card:hover {
+      border-color: var(--border-hover);
+    }
+
+    .education-title {
+      color: var(--accent);
+      font-size: 1.05rem;
+      margin: 0 0 0.4rem 0;
+    }
+
+    .education-meta {
+      font-weight: normal;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    /* Info Cards (Coding Principles & Tech Exploration) */
+    .info-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .info-card h4 {
+      color: var(--accent);
+      font-size: 1.1rem;
+      margin: 0 0 0.75rem 0;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .info-card ul {
+      padding-left: 1.25rem;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      margin: 0;
+    }
+
+    .info-card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    @media (max-width: 768px) {
+      .sections-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .about-section {
+        margin-bottom: 2.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Sticky Header Navigation -->
+  <header>
+    <div class="container nav-container">
+      <a href="../index.html" class="logo">DineshKumar<span>.</span></a>
+      <nav class="nav-links">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link active">About</a>
+        <a href="../index.html#skills" class="nav-link">Skills</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="certifications.html" class="nav-link">Certifications</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content Section -->
+  <section style="border: none;">
+    <div class="container">
+      <a href="../index.html#about" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
+
+      <h1 class="section-title">My Journey</h1>
+
+      <div class="sections-grid">
+        <!-- Left Side: Journey & Academic Details -->
+        <div>
+          <!-- Journey Overview -->
+          <div class="about-section">
+            <p class="about-p">
+              I am a person who partially believes in marks, but fully trusts in improving my knowledge, because knowledge makes you valuable, increases your worthiness, and earns you respect. It's not just about seeking respect, though—sharing earned and learned knowledge with others helps build a strong network and opens up new opportunities.
+            </p>
+            <p class="about-p">
+              I started my coding journey in my 2nd year of college. Java was the first thing I started off with, and later I stepped into web development. Initially, I started with HTML, CSS, and JS, but I soon realized that just knowing them isn't enough—a framework or library is needed. That's how I ended up learning React, and eventually went on to work with Node.js, Express, MongoDB, and learning system architecture.
+            </p>
+          </div>
+
+          <!-- Academic Details -->
+          <div class="about-section">
+            <h3 class="about-section-title">Academic Detail</h3>
+            <div class="education-list">
+
+              <div class="education-card">
+                <h4 class="education-title">B.Tech Information Technology (2022 - 2027)</h4>
+                <p class="education-meta">
+                  Erode Sengunthar Engineering College | CGPA: 7.83 (up to 5th semester)<br>
+                  In college, under the B.Tech IT section, I learned Java, OOP concepts, problem-solving, and web development.
+                </p>
+              </div>
+
+              <div class="education-card">
+                <h4 class="education-title">Higher Secondary Education (2021 - 2022)</h4>
+                <p class="education-meta">
+                  Kathiravan Matriculation Higher Secondary School | Marks: 71.8%<br>
+                  Focus: Physics, Chemistry, Computer Science, Mathematics
+                </p>
+              </div>
+
+              <div class="education-card">
+                <h4 class="education-title">Secondary Education (2019 - 2020)</h4>
+                <p class="education-meta">
+                  Kathiravan Matriculation Higher Secondary School | Marks: 74.6%
+                </p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side: Exploration -->
+        <div>
+          <!-- Tech Exploration -->
+          <div class="info-card">
+            <h4><i class="fa-solid fa-compass"></i> Tech Exploration</h4>
+            <p>
+              Even though I started out with Java, I later moved on to HTML, CSS, and JavaScript. Eventually, I expanded my skills to include React, Node.js, Express, and MongoDB. Currently, I am focused on diving deeper, understanding system architectures, and learning how things work at a system level.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-wrap">
+      <div class="footer-copy">&copy; 2026 DineshKumar S. All rights reserved.</div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
