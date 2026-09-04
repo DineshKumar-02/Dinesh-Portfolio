@@ -1,4 +1,88 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // Dynamic Theme & Accent Switcher Widget
+  function initThemeSwitcher() {
+    const switcher = document.createElement('div');
+    switcher.className = 'theme-switcher-pill';
+    
+    // Color Options
+    const colors = [
+      { name: 'gold', class: 'gold-dot', title: 'Amber Gold Theme' },
+      { name: 'mint', class: 'mint-dot', title: 'Emerald Mint Theme' },
+      { name: 'cyan', class: 'cyan-dot', title: 'Cyan Blue Theme' },
+      { name: 'pink', class: 'pink-dot', title: 'Magenta Pink Theme' }
+    ];
+    
+    colors.forEach(color => {
+      const dot = document.createElement('div');
+      dot.className = `color-dot ${color.class}`;
+      dot.title = color.title;
+      dot.dataset.accent = color.name;
+      switcher.appendChild(dot);
+    });
+    
+    // Dark / Light Toggle Button
+    const toggleBtn = document.createElement('button');
+    toggleBtn.className = 'theme-toggle-btn';
+    toggleBtn.title = 'Toggle Light / Dark Mode';
+    toggleBtn.innerHTML = '<i class="fa-solid fa-moon"></i>';
+    switcher.appendChild(toggleBtn);
+    
+    document.body.appendChild(switcher);
+    
+    // Stored Preferences Loading
+    const savedAccent = localStorage.getItem('portfolio-accent') || 'gold';
+    const savedDarkMode = localStorage.getItem('portfolio-darkmode') !== 'false'; // default true
+    
+    // Apply Accent
+    applyAccent(savedAccent);
+    // Apply Dark Mode
+    applyDarkMode(savedDarkMode);
+    
+    // Event listeners for dots
+    switcher.querySelectorAll('.color-dot').forEach(dot => {
+      dot.addEventListener('click', () => {
+        const accent = dot.dataset.accent;
+        applyAccent(accent);
+        localStorage.setItem('portfolio-accent', accent);
+      });
+    });
+    
+    // Event listener for toggle button
+    toggleBtn.addEventListener('click', () => {
+      const isCurrentDark = !document.body.classList.contains('light-theme');
+      applyDarkMode(!isCurrentDark);
+      localStorage.setItem('portfolio-darkmode', !isCurrentDark);
+    });
+    
+    function applyAccent(accentName) {
+      // Remove all accent classes
+      document.body.classList.remove('accent-gold', 'accent-mint', 'accent-cyan', 'accent-pink');
+      // Add selected
+      document.body.classList.add(`accent-${accentName}`);
+      
+      // Update dot active state
+      switcher.querySelectorAll('.color-dot').forEach(dot => {
+        if (dot.dataset.accent === accentName) {
+          dot.classList.add('active');
+        } else {
+          dot.classList.remove('active');
+        }
+      });
+    }
+    
+    function applyDarkMode(isDark) {
+      if (isDark) {
+        document.body.classList.remove('light-theme');
+        toggleBtn.innerHTML = '<i class="fa-solid fa-moon"></i>';
+      } else {
+        document.body.classList.add('light-theme');
+        toggleBtn.innerHTML = '<i class="fa-solid fa-sun"></i>';
+      }
+    }
+  }
+  
+  initThemeSwitcher();
+
   // Mobile Navigation Menu Toggle
   const hamburger = document.getElementById('hamburger');
   const navLinks = document.getElementById('nav-links');
