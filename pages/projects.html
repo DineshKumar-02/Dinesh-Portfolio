@@ -12,21 +12,6 @@
       padding-top: 6rem;
     }
 
-    .back-btn {
-      margin-bottom: 2rem;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      text-decoration: none;
-      color: var(--accent);
-      font-weight: 600;
-      font-family: var(--font-display);
-    }
-
-    .back-btn:hover {
-      text-decoration: underline;
-    }
-
     .detailed-project-list {
       display: flex;
       flex-direction: column;
@@ -34,46 +19,60 @@
     }
 
     .detail-card {
-      padding: 2.5rem;
+      padding: 3rem;
       background: var(--surface);
       border: 1px solid var(--border);
-      border-radius: 6px;
+      border-radius: 20px;
+      box-shadow: var(--shadow-md);
+      backdrop-filter: blur(12px);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .detail-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-4px);
+      box-shadow: 0 8px 30px var(--accent-glow);
     }
 
     .detail-block {
-      margin-top: 1.75rem;
+      margin-top: 2rem;
     }
 
     .detail-block h4 {
       font-family: var(--font-display);
-      font-size: 1.15rem;
+      font-size: 1.25rem;
       color: var(--text);
-      margin-bottom: 0.75rem;
-      padding-bottom: 0.3rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.4rem;
       border-bottom: 1px solid var(--border);
+      font-weight: 700;
     }
 
     .detail-block ul {
-      padding-left: 1.25rem;
+      padding-left: 1.5rem;
       color: var(--text-muted);
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
     }
 
     .detail-block ul li {
-      margin-bottom: 0.4rem;
-      font-size: 0.9rem;
+      font-size: 0.95rem;
+      line-height: 1.6;
     }
 
     .diagram-code {
-      background: #000;
-      padding: 1rem;
-      border-radius: 4px;
+      background: #0f172a;
+      padding: 1.25rem;
+      border-radius: 8px;
       border: 1px solid var(--border);
       font-family: monospace;
-      font-size: 0.85rem;
-      color: var(--accent);
+      font-size: 0.9rem;
+      color: #a78bfa;
       white-space: pre-wrap;
-      margin: 1rem 0;
+      margin: 1.5rem 0;
       overflow-x: auto;
+      line-height: 1.5;
     }
   </style>
 </head>
@@ -112,6 +111,110 @@
       <h1 class="section-title">Case Studies</h1>
 
       <div class="detailed-project-list">
+
+        <!-- CinePulse Detailed Case Study -->
+        <div class="detail-card">
+          <div class="project-meta">Full Stack MERN + Supabase</div>
+          <h2 style="font-family: var(--font-display); font-size: 2rem; margin-top: 0.25rem;">CinePulse – Netflix Streaming Platform</h2>
+
+          <div class="detail-block">
+            <h4>Application Architecture</h4>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">
+              CinePulse follows a decoupled full-stack streaming architecture. A responsive client application built with React 19 and Vite communicates with a Node.js / Express backend server for watchlist persistence and session handling, while syncing user records in a PostgreSQL database via Supabase and fetching live movie metadata dynamically via the TMDB REST API.
+            </p>
+            <div class="diagram-code">
+[React.js Frontend] ──(REST API / Watchlist)──> [Node / Express Server]
+│
+[Supabase PostgreSQL & Auth]
+│
+[React.js Frontend] <──(Live Streaming Feeds)─── [TMDB Cloud API]</div>
+          </div>
+
+          <div class="detail-block">
+            <h4>Key Features</h4>
+            <ul>
+              <li><strong>User Authentication:</strong> Secure email and password authentication with persistent session tracking powered by Supabase Auth and React Context API.</li>
+              <li><strong>Dynamic Content Discovery:</strong> Structured into 6+ genre channels (Trending Now, Top Rated, Action, Comedy, Horror, Romance) with real-time movie feeds fetched from TMDB.</li>
+              <li><strong>Cloud Watchlist CRUD:</strong> Full-stack personal "My List" router allowing users to safely add, retrieve, and delete saved movies across sessions with real-time database synchronization.</li>
+              <li><strong>Interactive Trailer Previews:</strong> Embedded YouTube trailer modal alongside cast details, vote ratings, release dates, and high-resolution backdrop banners.</li>
+              <li><strong>Instant Debounced Search:</strong> Fast, responsive search bar with debounced input handling to query thousands of titles without overloading API rate limits.</li>
+              <li><strong>Cloud Deployment:</strong> Deployed responsive frontend with single-page application (SPA) rewrite rules and configured Node/Express server endpoints on Render Cloud.</li>
+            </ul>
+          </div>
+
+          <div class="detail-block">
+            <h4>Challenges and Resolutions</h4>
+            <ul>
+              <li><strong>CORS & Preflight Blockers:</strong> Handled cross-domain security restrictions by configuring custom CORS headers and explicit <code>OPTIONS</code> HTTP 200 preflight responders inside the Express backend.</li>
+              <li><strong>SPA Reload 404 Drops:</strong> Prevented 404 navigation drops on sub-route page reloads (<code>/my-list</code>, <code>/movie/:id</code>) by configuring static site SPA rewrite mappings in <code>_redirects</code> (<code>/* /index.html 200</code>).</li>
+              <li><strong>Free-Tier Cold Start Resilience:</strong> Built a dual-tier client service layer that seamlessly falls back to direct Supabase SDK queries if the free-tier Express backend on Render is waking up from sleep.</li>
+              <li><strong>Cloud Host & Port Binding:</strong> Resolved cloud container routing drops on Render by explicitly binding the Express listener to <code>0.0.0.0</code> and automating dynamic environment configurations between development and production.</li>
+            </ul>
+          </div>
+
+          <div class="project-links" style="margin-top: 2rem;">
+            <a href="https://github.com/DineshKumar-02/netflix-clone" class="btn-sm-primary" target="_blank"><i
+                class="fa-brands fa-github"></i> Repository</a>
+            <a href="https://netflix-clone-frontend-4dsa.onrender.com" class="btn-sm-secondary" target="_blank"><i
+                class="fa-solid fa-arrow-up-right-from-square"></i> Live App</a>
+            <a href="https://netflix-clone-backend-6ouo.onrender.com/api/health" class="btn-sm-secondary" target="_blank"><i
+                class="fa-solid fa-server"></i> Live Backend API</a>
+          </div>
+        </div>
+
+        <!-- Revise-X Detailed Case Study -->
+        <div class="detail-card">
+          <div class="project-meta">React 19 & Python Asset Suite</div>
+          <h2 style="font-family: var(--font-display); font-size: 2rem; margin-top: 0.25rem;">Revise-X – Developer Study Notes Platform</h2>
+
+          <div class="detail-block">
+            <h4>Application Architecture</h4>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">
+              Revise-X pairs a modern high-performance React 19 frontend with an automated Python backend pipeline. The client offers real-time catalog search and in-browser interactive PDF previewing, while backend automation scripts handle dynamic watermarking, bundle compilation, and secure document generation.
+            </p>
+            <div class="diagram-code">
+[React 19 / Vite Frontend] ──(Razorpay Order Flow)──> [Checkout / Payment Gateway]
+│
+[Interactive Sample PDF Viewer Canvas]
+│
+[Python Automation Scripts] ──(Batch Watermark & Bundling)──> [Digital Asset Storage]</div>
+          </div>
+
+          <div class="detail-block">
+            <h4>Core Purpose & Solution</h4>
+            <ul>
+              <li><strong>The Problem:</strong> Countless 40+ hour video tutorials and verbose documentation make learning web technologies exhausting and time-consuming, leaving developers stuck without concise, practical reference notes when preparing for interviews or fast-paced development.</li>
+              <li><strong>The Solution:</strong> Built Revise-X as an affordable ₹50 revision ecosystem delivering clear-cut definitions, accurate syntax cheat sheets, and practical code implementations for effortless learning, quick concept recall, and rapid revision.</li>
+            </ul>
+          </div>
+
+          <div class="detail-block">
+            <h4>Key Features</h4>
+            <ul>
+              <li><strong>High-Yield Revision Guides:</strong> Handcrafted cheatsheets and developer roadmaps covering HTML5, CSS3, JavaScript ES6+, React, Node.js, and MongoDB for ₹50.</li>
+              <li><strong>Instant Live Search & Tag Filtering:</strong> Real-time topic search and category pills allowing developers to quickly locate target subject bundles with zero latency.</li>
+              <li><strong>Interactive In-Browser Sample Previewer:</strong> High-fidelity PDF viewer modal allowing users to inspect sample pages, table of contents, and diagram density before purchasing.</li>
+              <li><strong>Streamlined Checkout Experience:</strong> Integrated one-click checkout modal with instant confirmation, digital receipt generation, and direct access delivery.</li>
+              <li><strong>Automated Digital Watermarking:</strong> Python-powered backend pipeline (<code>reportlab</code> / <code>pypdf</code>) dynamically embedding branded diagonal watermarks, security metadata, and copyright footers onto distributed study materials.</li>
+            </ul>
+          </div>
+
+          <div class="detail-block">
+            <h4>Challenges and Resolutions</h4>
+            <ul>
+              <li><strong>Client-Side PDF Rendering Overhead:</strong> Optimized vector PDF document rendering using cached preview pages and lazy-loaded modal frames to maintain smooth 60fps responsiveness.</li>
+              <li><strong>Dynamic Pricing & Bundle State:</strong> Implemented single-source state stores for multi-item cart calculation, automatic volume discounts for bundle packs, and currency formatting.</li>
+              <li><strong>Automated Batch Processing:</strong> Built repeatable Python scripts for batch watermarking hundreds of pages with proportional scaling, opacity blending, and font rendering across different OS environments.</li>
+            </ul>
+          </div>
+
+          <div class="project-links" style="margin-top: 2rem;">
+            <a href="https://github.com/DineshKumar-02/REVISE-X-PROJECT" class="btn-sm-primary" target="_blank"><i
+                class="fa-brands fa-github"></i> Repository</a>
+            <a href="https://github.com/DineshKumar-02/REVISE-X-PROJECT" class="btn-sm-secondary" target="_blank"><i
+                class="fa-solid fa-arrow-up-right-from-square"></i> Project Details</a>
+          </div>
+        </div>
 
         <!-- ThinkHub Detailed Case Study -->
         <div class="detail-card">

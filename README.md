@@ -55,14 +55,28 @@ I am deeply curious about how systems work under the hood. While I enjoy buildin
 
 ## 💻 Featured Projects
 
-### 1. 📝 [ThinkHub — Community Blog](https://github.com/DineshKumar-02/ThinkHub-Blog-App)
+### 1. 🎬 [CinePulse — Netflix Streaming Platform](https://github.com/DineshKumar-02/netflix-clone)
+* **Tech Stack:** React 19, Vite, Node.js, Express.js, Supabase, PostgreSQL, TMDB API
+* **The Problem:** Streaming apps require dynamic movie catalog browsing, smooth trailer playback, and protected user watchlists without API rate bottlenecks.
+* **The Solution:** A decoupled full-stack streaming platform featuring TMDB REST API feeds, trailer modal playback, debounced live search, and cloud-synced user watchlists with PostgreSQL Row-Level Security.
+* **Technical Achievements:** Implemented dual-tier fallback to Supabase SDK during backend cold starts, configured CORS headers & preflight handlers, and resolved SPA routing drops with `_redirects` rules.
+* **Links:** [GitHub Repo](https://github.com/DineshKumar-02/netflix-clone) | [Live Demo](https://netflix-clone-frontend-4dsa.onrender.com) | [Backend API](https://netflix-clone-backend-6ouo.onrender.com/api/health)
+
+### 2. 📚 [Revise-X — Developer Study Notes Platform](https://github.com/DineshKumar-02/REVISE-X-PROJECT)
+* **Tech Stack:** React 19, Vite, JavaScript ES6, Python Scripts (pypdf, ReportLab), CSS3 Glassmorphism, Razorpay
+* **The Problem:** Countless 40+ hour video tutorials and verbose documentation make learning web development exhausting and time-consuming, leaving developers without concise reference notes for interviews or rapid recall.
+* **The Solution:** An affordable (₹50) high-yield developer revision platform delivering clear-cut definitions, accurate syntax cheat sheets, and practical implementation examples for effortless learning and rapid revision.
+* **Technical Achievements:** Developed client-side interactive PDF preview modals, single-source cart state with bundle volume discounts, and an automated Python batch-watermarking asset generation pipeline.
+* **Links:** [GitHub Repo](https://github.com/DineshKumar-02/REVISE-X-PROJECT)
+
+### 3. 📝 [ThinkHub — Community Blog](https://github.com/DineshKumar-02/ThinkHub-Blog-App)
 * **Tech Stack:** React, Node.js, Express, MongoDB (Mongoose), Netlify, Render
 * **The Problem:** Standard article sharing apps often feature cluttered, hard-to-navigate user interfaces.
 * **The Solution:** A category-based blogging system divided into 14 distinct channels that clean up navigation and stream sharing.
 * **Technical Achievements:** Handled database CORS policy constraints, implemented environment configs for stable endpoints, and set up rewrite redirect rules to prevent Netlify 404 page refreshes.
 * **Links:** [GitHub Repo](https://github.com/DineshKumar-02/ThinkHub-Blog-App) | [Live Demo](https://thinkhub-a-community-blog-web.onrender.com)
 
-### 2. 🔍 [MetaQR — QR Code Generator](https://github.com/DineshKumar-02/MetaQR)
+### 4. 🔍 [MetaQR — QR Code Generator](https://github.com/DineshKumar-02/MetaQR)
 * **Tech Stack:** HTML5, CSS3, JavaScript (ES6)
 * **The Problem:** Free online QR generators often restrict features (like download formatting or history lists) behind account registration or paywalls.
 * **The Solution:** A lightweight, client-side tool utilizing local browser scripts to generate QR codes directly in the DOM.

@@ -15,9 +15,10 @@
   <link rel="icon" type="image/png" href="./assets/images/Dinesh-Passport Size Photo.jpeg">
   <link rel="stylesheet" href="./style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 </head>
 
-<body>
+<body> 
   
 
   <!-- Sticky Header Navigation -->
@@ -66,7 +67,23 @@
       </div>
 
       <div class="hero-img-wrap">
-        <img src="./assets/images/Dinesh-Passport Size Photo.jpeg" alt="DineshKumar S" class="hero-img">
+        <div class="hero-img-container">
+          <img src="./assets/images/image.png" alt="DineshKumar S" class="hero-img">
+          
+          <!-- Floating Technology Badges -->
+          <div class="floating-badge badge-1" title="React.js">
+            <i class="fa-brands fa-react" style="color: #61dbfb;"></i>
+          </div>
+          <div class="floating-badge badge-2" title="JavaScript">
+            <i class="fa-brands fa-js" style="color: #f7df1e;"></i>
+          </div>
+          <div class="floating-badge badge-3" title="MongoDB">
+            <i class="fa-solid fa-database" style="color: #4db33d;"></i>
+          </div>
+          <div class="floating-badge badge-4" title="Java SE">
+            <i class="fa-brands fa-java" style="color: #f89820;"></i>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -194,14 +211,103 @@
 
       <div class="project-list">
 
-        <!-- ThinkHub Project -->
+        <!-- CinePulse Project -->
         <div class="project-item">
           <div class="project-media">
             <div class="project-img-grid">
-              <img src="./assets/project-images/thinkhub/Main page topics.png" alt="ThinkHub Topic categories"
-                class="span-2">
-              <img src="./assets/project-images/thinkhub/topic post.png" alt="ThinkHub Posts list">
-              <img src="./assets/project-images/thinkhub/backend.png" alt="ThinkHub server file code">
+              <img src="./assets/project-images/cinepulse/home_page.png" alt="CinePulse Netflix Streaming Platform" class="span-2">
+              <img src="./assets/project-images/cinepulse/login_page.png" alt="CinePulse Authentication Portal">
+              <img src="./assets/project-images/cinepulse/signup_page.png" alt="CinePulse User Registration">
+            </div>
+          </div>
+
+          <div class="project-info">
+            <div class="project-meta">Full Stack MERN + Supabase</div>
+            <h3>CinePulse — Netflix Streaming Platform</h3>
+            <p class="project-desc">
+              A responsive movie streaming and discovery platform mirroring the Netflix user experience. Integrates the TMDB REST API for live trending feeds, embedded YouTube trailer previews, debounced multi-genre search, and cloud-synced user watchlists.
+            </p>
+
+            <div class="project-ps">
+              <div class="ps-box prob">
+                <strong>Problem:</strong> Streaming platforms require instant trailer playback, real-time multi-genre discovery, and secure user-specific watchlists without API rate bottlenecks.
+              </div>
+              <div class="ps-box sol">
+                <strong>Solution:</strong> Built a decoupled architecture with Supabase Auth, PostgreSQL Row-Level Security, an Express backend router, and a resilient dual-tier client fallback layer.
+              </div>
+            </div>
+
+            <div class="project-tags">
+              <span class="skill-tag">React 19</span>
+              <span class="skill-tag">Vite</span>
+              <span class="skill-tag">Node.js</span>
+              <span class="skill-tag">Express</span>
+              <span class="skill-tag">Supabase</span>
+              <span class="skill-tag">PostgreSQL</span>
+              <span class="skill-tag">TMDB API</span>
+            </div>
+
+            <div class="project-links">
+              <a href="https://github.com/DineshKumar-02/netflix-clone" class="btn-sm-primary" target="_blank"><i
+                  class="fa-brands fa-github"></i> Code</a>
+              <a href="https://netflix-clone-frontend-4dsa.onrender.com" class="btn-sm-secondary"
+                target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Revise-X Project -->
+        <div class="project-item">
+          <div class="project-media">
+            <div class="project-img-grid">
+              <img src="./assets/project-images/revisex/home_page.png" alt="Revise-X Platform Dashboard" class="span-2">
+              <img src="./assets/project-images/revisex/catalog_page.png" alt="Revise-X Developer Notes Catalog">
+              <img src="./assets/project-images/revisex/preview_page.png" alt="Revise-X Sample Notes PDF Viewer">
+            </div>
+          </div>
+
+          <div class="project-info">
+            <div class="project-meta">React 19 & Python Asset Suite</div>
+            <h3>Revise-X — Developer Study Notes Platform</h3>
+            <p class="project-desc">
+              An ed-tech digital resources marketplace offering handcrafted developer revision guides and cheatsheets for ₹50. Features instant search & topic filtering, in-browser sample PDF preview modals, Razorpay checkout flow, and automated digital watermarking.
+            </p>
+
+            <div class="project-ps">
+              <div class="ps-box prob">
+                <strong>Problem:</strong> Countless 40+ hour video tutorials and verbose documentation make learning exhausting and time-consuming, leaving developers without concise reference notes for interviews or rapid recall.
+              </div>
+              <div class="ps-box sol">
+                <strong>Solution:</strong> Built an affordable ₹50 revision platform with clear-cut definitions, accurate code syntax, and practical implementation examples for effortless learning and rapid revision.
+              </div>
+            </div>
+
+            <div class="project-tags">
+              <span class="skill-tag">React 19</span>
+              <span class="skill-tag">Vite</span>
+              <span class="skill-tag">JavaScript ES6</span>
+              <span class="skill-tag">Python Scripts</span>
+              <span class="skill-tag">CSS3 / Glassmorphism</span>
+              <span class="skill-tag">Razorpay API</span>
+            </div>
+
+            <div class="project-links">
+              <a href="https://github.com/DineshKumar-02/REVISE-X-PROJECT" class="btn-sm-primary" target="_blank"><i
+                  class="fa-brands fa-github"></i> Code</a>
+              <a href="https://github.com/DineshKumar-02/REVISE-X-PROJECT" class="btn-sm-secondary"
+                target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ThinkHub Project -->
+        <div class="project-item">
+          <div class="project-media">
+            <div class="project-img-grid"> 
+              <img src="./Projects/Thinkhub/Project Screenshots/home_page.png" alt="ThinkHub Home Page" class="span-2">
+              <img src="./Projects/Thinkhub/Project Screenshots/profile_page.png" alt="ThinkHub Profile page">
+              <img src="./Projects/Thinkhub/Project Screenshots/signup_page.png" alt="ThinkHub validation page">
+              <img src="./Projects/Thinkhub/Project Screenshots/topic_page.png" alt="ThinkHub topic and categories page">
             </div>
           </div>
 
@@ -505,6 +611,22 @@
   </div>
 
   <script src="./script.js"></script>
+
+  <button onclick="col()" class="but" style="border-style:solid11; width: 50px;">Click</button>
+
+  <script>
+    function col() {
+
+    if (document.body.style.backgroundColor === "black") {
+        document.body.style.backgroundColor = "white";
+    } 
+    else {
+        document.body.style.backgroundColor = "black";
+        document.getElementsByClassName("hero-h1")[0].style.color = "black";
+       }
+}
+
+  </script>
 </body>
 
 </html>
