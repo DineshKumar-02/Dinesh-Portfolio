@@ -1071,9 +1071,10 @@ section {
 
 .form-input, .form-textarea {
   width: 100%;
-  background: #ffffff;
+  background: #ffffff !important;
   border: 1px solid rgba(15, 23, 42, 0.12);
-  color: black;
+  color: #000000 !important;
+  -webkit-text-fill-color: #000000 !important;
   padding: 0.9rem 1.25rem;
   border-radius: 10px;
   font-family: var(--font-body);
@@ -1081,10 +1082,18 @@ section {
   transition: all 0.3s ease;
 }
 
+.form-input::placeholder, .form-textarea::placeholder {
+  color: #64748b !important;
+  -webkit-text-fill-color: #64748b !important;
+  opacity: 1;
+}
+
 .form-input:focus, .form-textarea:focus {
   outline: none;
   border-color: var(--accent);
-  background: #ffffff;
+  background: #ffffff !important;
+  color: #000000 !important;
+  -webkit-text-fill-color: #000000 !important;
   box-shadow: 0 0 10px rgba(99, 102, 241, 0.15);
 }
 
