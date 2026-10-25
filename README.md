@@ -11,18 +11,24 @@
 
 ## 🚀 About Me
 
-I am a final-year **B.Tech Information Technology** student at **Erode Sengunthar Engineering College** and an aspiring **Full Stack Web Developer (MERN)** based in Tiruppur, Tamil Nadu. 
+I am a **Trainee Engineer** at **Qubitum Technologies — Coimbatore** and a **Full Stack Web Developer (MERN)** with a strong background in **B.Tech Information Technology** from **Erode Sengunthar Engineering College** (Tiruppur / Coimbatore, Tamil Nadu).
 
-I focus on building clean, modular, and performant web applications. My development path started in my second year of college when I picked up **Java** and object-oriented programming. Soon after, my curiosity pulled me into web development, where I progressed from vanilla **HTML, CSS, and JavaScript** into modern frontend and backend frameworks like **React.js, Node.js, Express.js, and MongoDB**.
+I focus on enterprise workflow automation, low-code systems development, and building clean, modular, and performant web applications. My coding journey started in my second year of college with **Java** and object-oriented programming. Soon after, my curiosity pulled me into web technologies, where I progressed from vanilla **HTML, CSS, and JavaScript** into full-stack frameworks like **React.js, Node.js, Express.js, and MongoDB**. Today, at Qubitum Technologies, I am expanding my development horizons into enterprise low-code ecosystems using the **Joget DX platform** (Form Builder, UI Builder, List Builder, and Process Automation).
 
 ---
 
-## 💡 Philosophy & Learning Curiosity
+## 💡 Philosophy & Personal Resilience
 
 > "I am a person who partially believes in marks, but fully trusts in improving my knowledge, because knowledge makes you valuable, increases your worthiness, and earns you respect. But it's not just about seeking respect—sharing earned and learned knowledge with others helps build a strong network and opens up new opportunities."
 
-I am deeply curious about how systems work under the hood. While I enjoy building user-facing MERN applications, I am actively focusing on:
-* 🖥️ **System Architecture:** Understanding how systems scale, manage state, and handle requests at a system level.
+### 🛡️ Behind the Scenes: The Road to Success
+To earn this role, behind the scenes, I made immense personal sacrifices and persevered through complications and demanding past mental and physical battles. Standing on the other side taught me the ultimate truths that anchor my life and engineering mindset:
+
+> *"Whatever happens, life has to move on. Time will heal everything, and everything happens for a reason."*
+
+I am deeply curious about how systems operate under the hood. Currently, I am actively focusing on:
+* ⚙️ **Enterprise Low-Code & BPM:** Architecting scalable enterprise forms, custom user interfaces, dynamic list views, and automated business workflows on Joget DX.
+* 🖥️ **System Architecture:** Understanding how distributed systems scale, manage state, and handle requests at an infrastructure level.
 * 🔗 **Decentralized Technologies & Cryptocurrencies:** Exploring web3 and blockchain mechanics (having completed introductory studies with Infosys Springboard).
 * 📊 **Data Analytics & Finance:** Applying modeling concepts (like Deloitte’s data analytics framework and real estate financial modeling) to business logic.
 
@@ -32,20 +38,28 @@ I am deeply curious about how systems work under the hood. While I enjoy buildin
 
 | Category | Technologies |
 | :--- | :--- |
-| **Languages** | Java, JavaScript (ES6+) |
-| **Frontend** | HTML5, CSS3, React.js |
-| **Backend & DB** | Node.js, Express.js, RESTful APIs, MongoDB, Supabase |
+| **Enterprise & Low-Code** | Joget DX Platform, Joget Form Builder, Joget UI Builder, Joget List Builder, Workflow Process Automation |
+| **Languages** | Java SE, JavaScript (ES6+), HTML5, CSS3 |
+| **Frontend** | React.js, Vite, Responsive UI/UX, Retro & Modern Design Systems |
+| **Backend & DB** | Node.js, Express.js, RESTful APIs, MongoDB, Supabase, PostgreSQL |
 | **Developer Tools** | Git & GitHub, Postman, Docker, VS Code |
 
 ---
 
 ## 📁 Professional Experience & Internships
 
+### 🔹 Trainee Engineer | Qubitum Technologies Pvt. Ltd. — Coimbatore
+*October 14, 2026 – Present*
+* **First Day of Office (Oct 14th):** Stepped into the corporate software arena as a Trainee Engineer.
+* **Joget DX Mastery:** Gaining hands-on development experience in the **Joget DX platform**, creating enterprise data capture models with **Form Builder**, responsive portals with **UI Builder**, and dynamic queries with **List Builder**.
+* **Workflow Automation:** Analyzing organizational requirements and implementing automated business logic processes.
+* **Enterprise Adaptation:** Rapidly adapting to the enterprise software production ecosystem, corporate workflows, and collaborative engineering practices.
+
 ### 🔹 Web Developer Intern | Codec Technologies Pvt. Ltd.
 *March 2026 – April 2026*
-* Built and launched **ThinkHub**, a fully-featured MERN blog platform.
+* Built and launched **ThinkHub**, a fully-featured MERN community blog platform.
 * Developed secure, RESTful API endpoints utilizing Node.js and Express.js.
-* Connected React frontend with Node.js backend and managed data storing.
+* Connected React frontend with Node.js backend and managed database storage.
 
 ### 🔹 Virtual Internship Programs (Forage)
 * **Deloitte – Data Analytics Job Experience (April 2026):** Analyzed data parameters to extract actionable corporate and business performance insights.
@@ -112,7 +126,7 @@ I am deeply curious about how systems work under the hood. While I enjoy buildin
 
 ## 📬 Let's Connect!
 
-I am eager to contribute to forward-thinking engineering teams where both my capabilities and the organization can grow. Feel free to reach out to discuss web development, systems architecture, or collaborating on new ideas!
+I am eager to contribute to forward-thinking engineering teams where both my capabilities and the organization can grow. Feel free to reach out to discuss enterprise workflow automation, full-stack systems architecture, or collaborating on new ideas!
 
 * 📧 **Email:** [dineshsudhakaran2706@gmail.com](mailto:dineshsudhakaran2706@gmail.com)
 * 💼 **LinkedIn:** [linkedin.com/in/dinesh45](https://linkedin.com/in/dinesh45)
@@ -122,4 +136,4 @@ I am eager to contribute to forward-thinking engineering teams where both my cap
 ---
 
 > ⚙️ **Note about this Repository:**
-> This repository contains the source code for my interactive portfolio web application (defined in [index.html](file:///m:/DineshKumar%20-%20Portolio/index.html)). It is designed with dark mode glassmorphism themes, dynamic scroll and typing effects, and certificate lightboxes built purely from scratch using HTML, CSS, and JavaScript.
+> This repository contains the source code for my interactive portfolio web application (defined in [index.html](file:///d:/Dinesh-Portfolio/Dinesh-Portfolio/index.html)). It is designed with a Cyber-Retro Terminal aesthetic, subtle CRT scanlines, dynamic typewriter command animations, retro workstation window frames, certificate lightboxes, and a live 4-color palette switcher built purely with lightweight, efficient HTML, CSS, and JavaScript.
